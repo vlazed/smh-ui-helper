@@ -50,6 +50,11 @@ end
 
 ---@param cpanel ControlPanel|DForm
 local function options(cpanel)
+	if not SMH then
+		cpanel:Help("#ui.smh.notinstalled")
+		return
+	end
+
 	init()
 
 	-- print("Commands")
